@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KL_BEAUTY OREOKASTRO | Κομμωτήριο • Νύχια • Μακιγιάζ</title>
+    <meta name="description" content="Ολοκληρωμένες υπηρεσίες ομορφιάς στο Ωραιόκαστρο Θεσσαλονίκης. Κομμωτήριο, περιποίηση νυχιών, μακιγιάζ.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-rose: #d4a373;
+            --primary-dark: #b5835a;
+            --soft-rose: #faedcd;
+            --bg-light: #fefae0;
+            --bg-white: #ffffff;
+            --text-dark: #2b2b2b;
+            --text-muted: #666666;
+            --border-color: #eedbc5;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #fcfbf9;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--primary-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-dark);
+        }
+
+        .btn-call-nav {
+            background-color: var(--primary-dark);
+            color: #ffffff !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-call-nav:hover {
+            background-color: var(--text-dark);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                        radial-gradient(circle, #5c4d44 0%, #1f1b18 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 8rem 2rem 6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--soft-rose);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            color: #f1f1f1;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-rose);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Section Layout */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.6rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-dark);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Services Grid */
+        .services-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-category-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .service-category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #fdf8f4, #f6ede3);
+            padding: 1.8rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-header i {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .category-header h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--text-dark);
+        }
+
+        .service-list {
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            flex-grow: 1;
+        }
+
+        .service-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dashed #e2e2e2;
+            padding-bottom: 0.8rem;
+        }
+
+        .service-info h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .service-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .service-price {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--primary-dark);
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        /* About / Experience Section */
+        .about-section {
+            background-color: #f7f3ee;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+        }
+
+        .features-list li i {
+            color: var(--primary-dark);
+        }
+
+        .about-box {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-box h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact & Info Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .contact-card h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-top: 0.2rem;
+        }
+
+        .contact-item h5 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-item p, .contact-item a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Quick Booking Form */
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid #d5d5d5;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1817;
+            color: #ffffff;
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .footer-logo span {
+            color: var(--primary-rose);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary-rose);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-top: 1.5rem;
+            border-top: 1px solid #333333;
+            padding-top: 1.5rem;
+            width: 100%;
+        }
+
+        /* Floating CTA on Mobile */
+        .mobile-float-call {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 999;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                padding: 1.5rem 2rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .mobile-float-call {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">KL_BEAUTY <span>OREOKASTRO</span></a>
+            <div class="mobile-toggle" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Υπηρεσίες</a></li>
+                <li><a href="#about">Σχετικά με εμάς</a></li>
+                <li><a href="#contact">Επικοινωνία & Τοποθεσία</a></li>
+                <li>
+                    <a href="tel:6975659830" class="btn-call-nav">
+                        <i class="fa-solid fa-phone"></i> 6975659830
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="subtitle">Κομμωτήριο • Νύχια • Μακιγιάζ</div>
+        <h1>KL_BEAUTY OREOKASTRO</h1>
+        <p>Ο απόλυτος προορισμός περιποίησης και ομορφιάς στο Ωραιόκαστρο. Αφεθείτε στα χέρια των ειδικών και αναδείξτε τον καλύτερο εαυτό σας.</p>
+        <div class="hero-buttons">
+            <a href="tel:6975659830" class="btn btn-primary">
+                <i class="fa-solid fa-calendar-check"></i> Κλείστε Ραντεβού
+            </a>
+            <a href="#services" class="btn btn-outline">
+                <i class="fa-solid fa-list"></i> Δείτε τις Υπηρεσίες
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <h2>ΟΙ ΥΠΗΡΕΣΙΕΣ ΜΑΣ</h2>
+            <p>Εξειδικευμένη φροντίδα για τα μαλλιά, τα νύχια και το μακιγιάζ σας</p>
+        </div>
+
+        <div class="services-wrapper">
+            
+            <!-- Category: Hair -->
+            <div class="service-category-card">
+                <div class="category-header">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h3>Κομμωτήριο</h3>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Κούρεμα Γυναικείο</h4>
+                            <p>Συμβουλευτική & λούσιμο</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Χτένισμα (Απλό / Βραδινό)</h4>
+                            <p>Ίσιωμα, κυματιστά, ανάλαφρες μπούκλες</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Βαφή (Ρίζα / Ολική)</h4>
+                            <p>Επαγγελματικά χρώματα υψηλής λάμψης</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Highlights / Ανταύγειες / Balayage</h4>
+                            <p>Φυσικό ξάνοιγμα και φωτεινότητα</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Θεραπείες Μαλλιών</h4>
+                            <p>Ενυδάτωση, κερατίνη, αναδόμηση</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Nails -->
+            <div class="service-category-card">
+                <div class="category-header">
+                    <i class="fa-solid fa-hand-sparkles"></i>
+                    <h3>Περιποίηση Νυχιών</h3>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Μανικιούρ (Απλό / Express)</h4>
+                            <p>Καθαρισμός, σχηματισμός & βάψιμο</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Ημιμόνιμο Μανικιούρ</h4>
+                            <p>Αντοχή και άψογη γυαλάδα έως 3 εβδομάδες</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Επιμήκυνση / Ενίσχυση με Gel / Acrygel</h4>
+                            <p>Φυσική ενίσχυση ή επιμήκυνση με φόρμα</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Πεντικιούρ (Θεραπευτικό / Αισθητικό)</h4>
+                            <p>Βαθιά ενυδάτωση, απολέπιση & περιποίηση</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Nail Art & Σχέδια</h4>
+                            <p>Custom σχέδια, ombre, french tips</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Makeup -->
+            <div class="service-category-card">
+                <div class="category-header">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3>Μακιγιάζ</h3>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Καθημερινό Μακιγιάζ (Day Look)</h4>
+                            <p>Φυσική, λαμπερή και ανάλαφρη όψη</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Βραδινό / Glam Μακιγιάζ</h4>
+                            <p>Έντονα μάτια, contouring & μεγάλη διάρκεια</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Νυφικό Μακιγιάζ (Bridal)</h4>
+                            <p>Περιλαμβάνει δοκιμαστικό και εξατομικευμένη μελέτη</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Sculpting & Contouring</h4>
+                            <p>Τονισμός χαρακτηριστικών και φωτοσκιάσεις</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h4>Τοποθέτηση Βλεφαρίδων (Strip/Tuft)</h4>
+                            <p>Για ακόμη πιο εντυπωσιακό βλέμμα</p>
+                        </div>
+                        <div class="service-price">-- €</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Γιατί να επιλέξετε το KL_BEAUTY</h2>
+                    <p>Στο <strong>KL_BEAUTY OREOKASTRO</strong> συνδυάζουμε το πάθος για την ομορφιά με τα πιο ποιοτικά επώνυμα προϊόντα της αγοράς. Δημιουργήσαμε έναν ζεστό, μοντέρνο και φιλόξενο χώρο όπου μπορείτε να απολαύσετε ολοκληρωμένη περιποίηση από την κορυφή ως τα νύχια.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Εξειδικευμένοι επαγγελματίες με συνεχή κατάρτιση</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Υψηλά πρότυπα καθαριότητας και αποστείρωσης εργαλείων</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Εξατομικευμένες συμβουλές σύμφωνα με το προσωπικό σας στυλ</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Εύκολη πρόσβαση στη Λεωφόρο Δημοκρατίας 31, Ωραιόκαστρο</li>
+                    </ul>
+                </div>
+                <div class="about-box">
+                    <h3>Κλείστε το Ραντεβού σας</h3>
+                    <p>Εξυπηρετούμε κατόπιν ραντεβού για να σας αφιερώνουμε τον χρόνο και τη φροντίδα που σας αξίζει.</p>
+                    <br>
+                    <a href="tel:6975659830" class="btn btn-primary">
+                        <i class="fa-solid fa-phone"></i> Καλέστε στο 6975659830
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <h2>ΕΠΙΚΟΙΝΩΝΙΑ & ΤΟΠΟΘΕΣΙΑ</h2>
+            <p>Θα χαρούμε να σας υποδεχτούμε στον χώρο μας</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Details -->
+            <div class="contact-card">
+                <h3>Στοιχεία Επικοινωνίας</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h5>Διεύθυνση</h5>
+                            <p>Λεωφόρος Δημοκρατίας 31, Ωραιόκαστρο, Θεσσαλονίκη</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h5>Τηλέφωνο Επικοινωνίας</h5>
+                            <p><a href="tel:6975659830">6975659830</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h5>Ωράριο Λειτουργίας</h5>
+                            <p>Τρίτη - Παρασκευή: 09:00 - 20:00<br>Σάββατο: 09:00 - 17:00<br>Κυριακή & Δευτέρα: Κλειστά</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Booking / Inquiry Form -->
+            <div class="contact-card">
+                <h3>Εκδήλωση Ενδιαφέροντος</h3>
+                <form class="booking-form" onsubmit="event.preventDefault(); alert('Ευχαριστούμε! Θα επικοινωνήσουμε άμεσα μαζί σας.');">
+                    <div class="form-group">
+                        <label for="name">Ονοματεπώνυμο</label>
+                        <input type="text" id="name" required placeholder="π.χ. Μαρία Παπαδοπούλου">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Τηλέφωνο</label>
+                        <input type="tel" id="phone" required placeholder="π.χ. 6900000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Επιλογή Υπηρεσίας</label>
+                        <select id="service" required>
+                            <option value="">Επιλέξτε Υπηρεσία...</option>
+                            <option value="hair">Κομμωτήριο</option>
+                            <option value="nails">Περιποίηση Νυχιών</option>
+                            <option value="makeup">Μακιγιάζ</option>
+                            <option value="combo">Συνδυασμός Υπηρεσιών</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Σημείωση / Επιθυμητή ώρα</label>
+                        <textarea id="notes" rows="3" placeholder="Γράψτε μας αν επιθυμείτε συγκεκριμένη μέρα ή ώρα..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer;">
+                        Αποστολή Αιτήματος
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Call Button for Mobile Phones -->
+    <a href="tel:6975659830" class="mobile-float-call">
+        <i class="fa-solid fa-phone"></i> Κλήση για Ραντεβού
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">KL_BEAUTY <span>OREOKASTRO</span></div>
+            <p>Λεωφόρος Δημοκρατίας 31, Ωραιόκαστρο | Τηλ: 6975659830</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="tel:6975659830" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 KL_BEAUTY OREOKASTRO. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
